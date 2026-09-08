@@ -208,27 +208,126 @@ img {
 
 /* DORES */
 
-.pains .eyebrow {
-  text-align: center;
+/* TÍTULO DA SEÇÃO */
+
+.section-dores .eyebrow {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--azul);
+    max-width: 760px;
+    margin: 0 auto 45px;
 }
 
-.thoughts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin: 28px 0;
+
+/* BALÕES DE PENSAMENTO */
+
+.pensamentos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 35px 24px;
+    max-width: 1050px;
+    margin: 0 auto 45px;
 }
 
-.thought {
-  min-height: 135px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 1px solid var(--linha);
-  border-radius: 20px;
-  background: var(--offwhite);
-  text-align: center;
+.pensamento {
+    position: relative;
+    grid-column: span 2;
+    min-height: 230px;
+    padding: 38px 32px;
+    background: var(--offwhite);
+    border: 2px solid var(--azul);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* deixa os dois últimos centralizados */
+.pensamento:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.pensamento:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+/* bolinha maior do pensamento */
+.pensamento::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    bottom: -20px;
+    left: 25%;
+    background: var(--offwhite);
+    border: 2px solid var(--azul);
+    border-radius: 50%;
+}
+
+/* bolinha menor do pensamento */
+.pensamento::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    bottom: -34px;
+    left: 21%;
+    background: var(--offwhite);
+    border: 2px solid var(--azul);
+    border-radius: 50%;
+}
+
+.pensamento h3 {
+    font-family: "Playfair Display", serif;
+    color: var(--azul);
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.pensamento p {
+    color: #39464a;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 760px) {
+
+    .section-dores .eyebrow {
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+
+    .pensamentos {
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+    }
+
+    .pensamento {
+        width: 100%;
+        min-height: 210px;
+        padding: 34px 28px;
+        border-radius: 50%;
+    }
+
+    .pensamento h3 {
+        font-size: 1.2rem;
+    }
+
+    .pensamento p {
+        font-size: 0.92rem;
+    }
 }
 
 .thought h3 {
