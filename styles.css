@@ -1150,3 +1150,37 @@ img {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(64, 93, 105, 0.18);
 }
+/* CARDS DOS MATERIAIS — EFEITO 3D + PULSO */
+
+.material-link {
+    box-shadow:
+        0 5px 0 rgba(64, 93, 105, 0.22),
+        0 9px 18px rgba(64, 93, 105, 0.12);
+
+    transform: translateY(0);
+    animation: cardPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes cardPulse {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow:
+            0 5px 0 rgba(64, 93, 105, 0.22),
+            0 9px 18px rgba(64, 93, 105, 0.12);
+    }
+
+    50% {
+        transform: translateY(-3px) scale(1.015);
+        box-shadow:
+            0 7px 0 rgba(64, 93, 105, 0.20),
+            0 14px 26px rgba(64, 93, 105, 0.20);
+    }
+}
+
+.material-link:hover {
+    animation: none;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow:
+        0 8px 0 rgba(64, 93, 105, 0.24),
+        0 16px 30px rgba(64, 93, 105, 0.22);
+}
