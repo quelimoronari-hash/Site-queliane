@@ -1126,3 +1126,27 @@ img {
     background: var(--azul);
     color: var(--offwhite);
 }
+/* DESTAQUE DOS MATERIAIS GRATUITOS */
+
+.material-link {
+    border: 1px solid var(--azul);
+    box-shadow: 0 6px 16px rgba(64, 93, 105, 0.12);
+}
+
+.material-link::after {
+    display: inline-block;
+    width: fit-content;
+    padding: 7px 13px;
+    border-radius: 999px;
+
+    background: var(--azul);
+    color: var(--offwhite);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.material-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(64, 93, 105, 0.18);
+}
