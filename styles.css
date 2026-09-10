@@ -976,7 +976,16 @@ img {
 
     transform: rotate(-4deg);
 }
-
+.about-handwritten::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 1px;
+    background: var(--azul);
+    margin-top: 10px;
+    margin-left: 35px;
+    transform: rotate(-2deg);
+}
 
 /* TEXTO DO SOBRE MIM */
 
