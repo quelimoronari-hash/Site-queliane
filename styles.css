@@ -884,3 +884,106 @@ img {
   }
 
 }
+/* AJUSTE FINAL - FOTO SOBRE MIM */
+
+.about-new-grid {
+    display: grid;
+    grid-template-columns: 46% 54%;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-new-visual {
+    position: relative;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-new-photo {
+    position: relative;
+    z-index: 3;
+    width: 88%;
+    max-width: 430px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ELEMENTOS DECORATIVOS ATRÁS DA FOTO */
+
+.about-shape {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.about-shape-one {
+    width: 310px;
+    height: 310px;
+    border: 1px solid var(--azul);
+    border-radius: 50%;
+    left: 5%;
+    top: 12%;
+}
+
+.about-shape-two {
+    width: 230px;
+    height: 330px;
+    background: var(--azul);
+    opacity: 0.08;
+    border-radius: 48% 52% 55% 45%;
+    right: 5%;
+    bottom: 8%;
+    transform: rotate(18deg);
+}
+
+/* FRASE MANUSCRITA */
+
+.about-handwritten {
+    position: absolute;
+    z-index: 4;
+    left: 3%;
+    bottom: 2%;
+    width: 310px;
+    margin: 0;
+    font-family: "Caveat", cursive;
+    font-size: 1.65rem;
+    line-height: 1.15;
+    transform: rotate(-3deg);
+}
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+    .about-new-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-new-visual {
+        min-height: 480px;
+    }
+
+    .about-new-photo {
+        width: 82%;
+        max-width: 350px;
+    }
+
+    .about-handwritten {
+        left: 5%;
+        bottom: 0;
+        width: 270px;
+        font-size: 1.4rem;
+    }
+
+    .about-shape-one {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-shape-two {
+        width: 190px;
+        height: 280px;
+    }
+}
