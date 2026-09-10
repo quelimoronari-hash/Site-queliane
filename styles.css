@@ -884,106 +884,164 @@ img {
   }
 
 }
-/* AJUSTE FINAL - FOTO SOBRE MIM */
+/* SOBRE MIM - COMPOSIÇÃO EDITORIAL */
 
 .about-new-grid {
     display: grid;
-    grid-template-columns: 46% 54%;
+    grid-template-columns: 49% 51%;
     align-items: center;
-    gap: 50px;
+    gap: 56px;
 }
+
+
+/* ÁREA DA FOTO */
 
 .about-new-visual {
     position: relative;
-    min-height: 560px;
+    min-height: 650px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+
+/* FOTO */
+
 .about-new-photo {
     position: relative;
-    z-index: 3;
-    width: 88%;
-    max-width: 430px;
+    z-index: 4;
+    width: 100%;
+    max-width: 500px;
     height: auto;
     object-fit: contain;
 }
 
-/* ELEMENTOS DECORATIVOS ATRÁS DA FOTO */
+
+/* ELEMENTOS ORGÂNICOS */
 
 .about-shape {
     position: absolute;
-    z-index: 1;
     pointer-events: none;
 }
 
+
+/* MANCHA ORGÂNICA */
+
 .about-shape-one {
-    width: 310px;
-    height: 310px;
-    border: 1px solid var(--azul);
-    border-radius: 50%;
-    left: 5%;
-    top: 12%;
+    z-index: 1;
+
+    width: 390px;
+    height: 500px;
+
+    left: 1%;
+    top: 7%;
+
+    background: var(--azul);
+    opacity: 0.16;
+
+    border-radius:
+        61% 39% 68% 32%
+        / 43% 64% 36% 57%;
+
+    transform: rotate(-10deg);
 }
 
+
+/* CONTORNO ORGÂNICO */
+
 .about-shape-two {
-    width: 230px;
-    height: 330px;
-    background: var(--azul);
-    opacity: 0.08;
-    border-radius: 48% 52% 55% 45%;
-    right: 5%;
-    bottom: 8%;
-    transform: rotate(18deg);
+    z-index: 2;
+
+    width: 470px;
+    height: 420px;
+
+    left: -4%;
+    top: 14%;
+
+    background: transparent;
+    border: 2px solid var(--azul);
+
+    border-radius:
+        63% 37% 58% 42%
+        / 38% 62% 38% 62%;
+
+    transform: rotate(14deg);
 }
+
 
 /* FRASE MANUSCRITA */
 
 .about-handwritten {
     position: absolute;
-    z-index: 4;
-    left: 3%;
-    bottom: 2%;
-    width: 310px;
+    z-index: 5;
+
+    left: 2%;
+    bottom: -2%;
+
+    width: 430px;
     margin: 0;
-    font-family: "Caveat", cursive;
-    font-size: 1.65rem;
-    line-height: 1.15;
-    transform: rotate(-3deg);
+
+    font-family: "Allura", cursive;
+    font-size: 2.7rem;
+    font-weight: 400;
+    line-height: 0.95;
+
+    color: var(--azul);
+
+    transform: rotate(-4deg);
 }
+
+
+/* TEXTO DO SOBRE MIM */
+
+.about-copy {
+    position: relative;
+    z-index: 6;
+}
+
 
 /* CELULAR */
 
 @media (max-width: 768px) {
+
     .about-new-grid {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 28px;
     }
 
     .about-new-visual {
-        min-height: 480px;
+        min-height: 520px;
+        order: 1;
+    }
+
+    .about-copy {
+        order: 2;
     }
 
     .about-new-photo {
-        width: 82%;
-        max-width: 350px;
-    }
-
-    .about-handwritten {
-        left: 5%;
-        bottom: 0;
-        width: 270px;
-        font-size: 1.4rem;
+        width: 94%;
+        max-width: 390px;
     }
 
     .about-shape-one {
-        width: 250px;
-        height: 250px;
+        width: 290px;
+        height: 390px;
+        left: 6%;
+        top: 8%;
     }
 
     .about-shape-two {
-        width: 190px;
-        height: 280px;
+        width: 340px;
+        height: 320px;
+        left: 1%;
+        top: 14%;
+    }
+
+    .about-handwritten {
+        width: 320px;
+        left: 4%;
+        bottom: -1%;
+        font-size: 2.05rem;
+        line-height: 0.98;
     }
 }
