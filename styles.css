@@ -1103,3 +1103,26 @@ img {
         min-height: auto;
     }
 }
+/* AJUSTE — E COMO VAI FUNCIONAR */
+
+.therapy-how-section .therapy-how {
+    border-top: none;
+    padding-top: 0;
+}
+
+.therapy-how-section .eyebrow {
+    color: var(--azul);
+}
+
+.therapy-how-section p {
+    color: var(--texto);
+}
+
+.therapy-how-section .therapy-final {
+    color: var(--azul);
+}
+
+.therapy-how-section .btn-light {
+    background: var(--azul);
+    color: var(--offwhite);
+}
