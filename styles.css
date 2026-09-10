@@ -911,7 +911,7 @@ img {
     position: relative;
     z-index: 4;
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     height: auto;
     object-fit: contain;
 }
