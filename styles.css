@@ -979,11 +979,11 @@ img {
 .about-handwritten::after {
     content: "";
     display: block;
-    width: 75px;
+    width: 110px;
     height: 1px;
     background: var(--azul);
     margin-top: 10px;
-    margin-left: 35px;
+    margin-left: 5%;
     transform: rotate(-2deg);
 }
 
