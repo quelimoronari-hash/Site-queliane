@@ -1201,5 +1201,7 @@ img {
         order: 2;
         margin-top: 35px;
     }
-
+.about-handwritten {
+    bottom: -45px;
+}
 }
