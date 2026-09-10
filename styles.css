@@ -1184,3 +1184,22 @@ img {
         0 8px 0 rgba(64, 93, 105, 0.24),
         0 16px 30px rgba(64, 93, 105, 0.22);
 }
+/* SOBRE MIM — SOMENTE CELULAR */
+
+@media (max-width: 768px) {
+
+    .about-new-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-copy {
+        order: 1;
+    }
+
+    .about-new-visual {
+        order: 2;
+        margin-top: 35px;
+    }
+
+}
