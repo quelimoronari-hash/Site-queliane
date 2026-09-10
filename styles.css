@@ -979,7 +979,7 @@ img {
 .about-handwritten::after {
     content: "";
     display: block;
-    width: 110px;
+    width: 350px;
     height: 1px;
     background: var(--azul);
     margin-top: 10px;
